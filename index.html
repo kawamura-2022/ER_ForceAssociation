@@ -73,178 +73,144 @@
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
-                    <h1>Tables</h1><br />
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="callout callout-info">
-                                <h4>SchemaSpy Analysis of ForceAssociation_db</h4>
-                                <p>Generated on Sun Apr 11 03:07 GMT 2021</p>
-                            </div>
-                        </div>
+                    <h1>Anomalies</h1><br />
+                    <div class="callout callout-warning">
+                        <p>Things that might not be 'quite right' about your database and schema</p>
                     </div>
-                    <a href="ForceAssociation_db.ForceAssociation_db.xml" title="XML Representation">XML Representation</a><br />
-                    <a href="insertionOrder.txt" title="Useful for loading data into a database">Insertion Order</a>
-                    <a href="deletionOrder.txt" title="Useful for purging data from a database">Deletion Order</a>
                 </section>
                 <!-- Main content -->
                 <section class="content">
                     <div class="row">
-                        <div class="col-md-2 col-sm-4 col-xs-12">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-aqua"><i class="fa fa-table"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">TABLES</span>
-                                    <span class="info-box-number">5</span>
+                        <div class="col-md-6"> <!-- Implied Relationship -->
+                            <div class="box box-success">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">Columns whose name and type imply a relationship to another table's primary key</h3>
+                                    <div class="box-tools pull-right">
+                                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                    </div>
                                 </div>
-                                <!-- /.info-box-content -->
-                            </div>
-                            <!-- /.info-box -->
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-md-2 col-sm-4 col-xs-12">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-teal"><i class="fa fa-table"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">VIEWS</span>
-                                    <span class="info-box-number">0</span>
+                                <div class="box-body">
+                                    <table id="implied_constraint" class="table table-bordered table-striped dataTable" role="grid">
+                                        <thead align='left'>
+                                            <tr>
+                                                <th>Child Column</th>
+                                                <th>Implied Parent Column</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="3">Anomaly not detected</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <!-- /.info-box-content -->
                             </div>
-                            <!-- /.info-box -->
                         </div>
-                        <!-- /.col -->
-                        <div class="col-md-2 col-sm-4 col-xs-12">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-green"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">COLUMNS</span>
-                                    <span class="info-box-number">27</span>
+                        <div class="col-md-6"> <!-- Tables without indexes -->
+                            <div class="box box-danger">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">Tables without indexes</h3>
+                                    <div class="box-tools pull-right">
+                                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                    </div>
                                 </div>
-                                <!-- /.info-box-content -->
-                            </div>
-                            <!-- /.info-box -->
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-md-2 col-sm-4 col-xs-12">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-yellow"><i class="ion ion-key"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Constraints</span>
-                                    <span class="info-box-number">1</span>
+                                <div class="box-body">
+                                    <table id="un_indexed_table" class="table table-bordered table-striped dataTable" role="grid">
+                                        <thead align='left'>
+                                            <tr>
+                                                <th>Table</th>
+                                                <th>Rows</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="3">Anomaly not detected</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <!-- /.info-box-content -->
                             </div>
-                            <!-- /.info-box -->
                         </div>
-                        <!-- /.col -->
-                        <div class="col-md-2 col-sm-4 col-xs-12">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-red-active"><i class="fa fa-question" aria-hidden="true"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Anomalies</span>
-                                    <span class="info-box-number">0</span>
+                        <div class="col-md-6"> <!-- Tables that contain a single column -->
+                            <div class="box box-info">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">Tables that contain a single column</h3>
+                                    <div class="box-tools pull-right">
+                                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                    </div>
                                 </div>
-                                <!-- /.info-box-content -->
-                            </div>
-                            <!-- /.info-box -->
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-md-2 col-sm-4 col-xs-12">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-navy"><i class="fa fa-file-code-o" aria-hidden="true"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Routines</span>
-                                    <span class="info-box-number">0</span>
+                                <div class="box-body">
+                                    <table id="single_column_table" class="table table-bordered table-striped dataTable" role="grid">
+                                        <thead align='left'>
+                                            <tr>
+                                                <th>Table</th>
+                                                <th>Column</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="3">Anomaly not detected</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <!-- /.info-box-content -->
                             </div>
-                            <!-- /.info-box -->
                         </div>
-                        <!-- /.col -->
+                        <div class="col-md-6"> <!-- Tables with incrementing column names, potentially indicating denormalization -->
+                            <div class="box box-danger">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">Tables with incrementing column names, potentially indicating denormalization</h3>
+                                    <div class="box-tools pull-right">
+                                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                    </div>
+                                </div>
+                                <div class="box-body">
+                                    <table id="inc_column_table" class="table table-bordered table-striped dataTable" role="grid">
+                                        <thead align='left'>
+                                            <tr>
+                                                <th>Table</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="3">Anomaly not detected</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6"> <!-- Columns whose default value is the word 'NULL' or 'null', but the SQL NULL value may have been intended -->
+                            <div class="box box-primary">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title" title="Columns whose default value is the word 'NULL' or 'null', but the SQL NULL value may have been intende">Columns whose default value is the word 'NULL' or 'null'</h3>
+                                    <div class="box-tools pull-right">
+                                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                    </div>
+                                </div>
+                                <div class="box-body">
+                                    <table id="null_string_table" class="table table-bordered table-striped dataTable" role="grid">
+                                        <thead align='left'>
+                                            <tr>
+                                                <th>Table</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="3">Anomaly not detected</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="box box-primary">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">Database Properties</h3>
-                            <span class="label label-primary pull-right"><i class="fa fa-cog fa-2x"></i></span>
-                        </div><!-- /.box-header -->
-                        <div class="box-body">
-                            <p>Database Type: MySQL - 8.0.17</p>
-                        </div><!-- /.box-body -->
-                    </div>
-                    <div class="box box-primary">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">Tables</h3>
-                            <span class="label label-primary pull-right"><i class="fa fa-database fa-2x"></i></span>
-                        </div><!-- /.box-header -->
-                        <div class="box-body">
-                            <table id="database_objects" class="table table-bordered table-striped dataTable" role="grid">
-                                <thead>
-                                    <tr>
-                                        <th valign="bottom">Table / View</th>
-                                        <th align="right" valign="bottom">Children</th>
-                                        <th align="right" valign="bottom">Parents</th>
-                                        <th align="right" valign="bottom">Columns</th>
-                                        <th align="right" valign="bottom">Rows</th>
-                                        <th align="right" valign="bottom">Type</th>
-                                        <th class="toggle">Comments</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/word_count.html">word_count</a></td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">4</td>
-                                        <td class="detail" align="right">12</td>
-                                        <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"></td>
-                                    </tr>
-                                    <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/failed_jobs.html">failed_jobs</a></td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">6</td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"></td>
-                                    </tr>
-                                    <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/word_split.html">word_split</a></td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">5</td>
-                                        <td class="detail" align="right">166</td>
-                                        <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"></td>
-                                    </tr>
-                                    <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/password_resets.html">password_resets</a></td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">1</td>
-                                        <td class="detail" align="right">3</td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"></td>
-                                    </tr>
-                                    <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/users.html">users</a></td>
-                                        <td class="detail" align="right">1</td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">9</td>
-                                        <td class="detail" align="right">12</td>
-                                        <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"></td>
-                                    </tr>
-                            </table>
-                        </div>
-                    </div><!-- /.box-body -->
                 </section>
-                <!-- /.content -->
-                <script>
-                    var config = {
-                        pagination: true
-                    }
-                </script>
             </div>
             <!-- /.content-wrapper -->
             <footer class="main-footer">
@@ -291,7 +257,7 @@
         <script src="bower/codemirror/sql.js"></script>
         <!-- AdminLTE App -->
         <script src="bower/admin-lte/dist/js/app.min.js"></script>
-        <script src="main.js"></script>
+        <script src="anomalies.js"></script>
         <script src="schemaSpy.js"></script>
     </body>
 </html>
